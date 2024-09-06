@@ -3,7 +3,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class JsonToJava {
     public static void main(String[] args) {
         String json = "{ \"personDetails\": { \"person\": { \"name\": \"John\", \"age\": 30 }, \"addresses\": [ { \"street\": \"123 Main St\", \"city\": \"New York\" }, { \"street\": \"456 Maple Dr\", \"city\": \"Los Angeles\" } ], \"phoneNumber\": \"123-456-7890\" } }";
-
+  // Hazrath user  code starts
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             PersonSummary personSummary = objectMapper.readValue(json, PersonSummary.class);
@@ -11,5 +11,6 @@ public class JsonToJava {
         } catch (Exception e) {
             e.printStackTrace();
         }
+  // Hazrath use code ends
     }
 }
